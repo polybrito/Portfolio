@@ -19,11 +19,20 @@ body {
 /* Cabeçalho */
 .cabecalho {
     width: 100%;
-    background: linear-gradient(to bottom, #ffb3c6, #ffe5ec);
+    background: linear-gradient(to bottom, #fcebf0, #ffe5ec);
     color: #fb6f92;
     text-align: center;
     padding: 1.5rem 0;
 }
+
+/* .cabecalho h1 {
+    color: white;
+    text-shadow: 
+        0.5px 0.5px 0 #fc557f, 
+       -0.5px 0.5px 0 #fc557f, 
+        0.5px -0.5px 0 #fc557f, 
+       -0.5px -0.5px 0 #fc557f;
+} */
 
 /* Conteúdo */
 .conteudo {
@@ -37,11 +46,16 @@ body {
     margin-bottom: 2.5rem;
 }
 
-.secaoExp h2 {
+.secao h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #fb6f92;
     text-align: center;
+    text-shadow: 
+        0.5px 0.5px 0 white, 
+       -0.5px 0.5px 0 white, 
+        0.5px -0.5px 0 white, 
+       -0.5px -0.5px 0 white;
 }
 
 /* Alinhamento */
