@@ -9,16 +9,25 @@
 <body>
     <header class="cabecalho">
         <h1>Olá, meu nome é Poliana, conheça aqui minha trajetória!</h1>
-        <!-- <h2>Olá, meu nome é Poliana, conheça aqui minha trajetória!</h2> -->
     </header>
 
     <main class="conteudo">
         <section id="informacoes-pessoais" class="secao">
-            <h2>Informações Pessoais</h2>
-            <div class="linha">
-                <p><strong>Nome:</strong> <span id="nome">Poliana Brito Fidelis</span></p>
-                <p><strong>Email:</strong> <span id="email">meuemail@email.com</span></p>
-                <p><strong>Telefone:</strong> <span id="telefone">(11) 91111-1111</span></p>
+            <div class="linha-pessoal">
+                <div class="informacoes">
+                    <p><strong>Nome:</strong> Poliana Brito Fidelis</p>
+                    <p><strong>Email:</strong> meuemail@email.com</p>
+                    <p><strong>Telefone:</strong> (11) 91111-1111</p>
+                </div>
+                <div class="foto-perfil">
+                    <img src="../img/foto perfil.png" alt="Foto de Poliana">
+                </div>
+                <div class="resumo">
+                    <h3>Resumo Profissional</h3>
+                    <p>
+                        Desenvolvedora e analista de sistemas em formação, com experiência em manutenção de hardware, suporte técnico, design gráfico e desenvolvimento de soluções tecnológicas. Proativa, organizada e focada em entregar resultados de qualidade.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -27,59 +36,73 @@
             <div class="secao">
                 <div class="grid">
                     <div>
-                        <p>Janeiro de 2022 - O momento atual</p>
+                        <p class="data">Janeiro de 2022 - O momento atual</p>
+                        <div class="texto">
                         <p><strong>Cargo:</strong> Técnica de serviços de informática</p>
                         <p><strong>Empresa:</strong> Freelancer</p>
                         <p><strong>Descrição:</strong> Manutenção de hardware e software de computadores e notebooks.</p>
+                        </div>
                     </div>
                     <div>
-                        <p>Dezembro de 2023 - Maio de 2024</p>
+                        <p class="data">Dezembro de 2023 - Maio de 2024</p>
+                        <div class="texto">
                         <p><strong>Cargo:</strong> Estagiária em DevSecOps</p>
                         <p><strong>Empresa:</strong> Compass UOL</p>
                         <p><strong>Descrição:</strong> Manutenção de hardware e software de computadores e notebooks.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="secao">
                 <div class="grid">
                     <div>
-                        <p>Agosto de 2023 - Novembro de 2023</p>
+                        <p class="data">Agosto de 2023 - Novembro de 2023</p>
+                        <div class="texto">
                         <p><strong>Cargo:</strong> Vendedora</p>
                         <p><strong>Empresa:</strong> Integratek Distribuidora em Informática</p>
                         <p><strong>Descrição:</strong> Venda de itens de informática.</p>
+                        </div>
                     </div>
                     <div>
-                        <p>Março de 2023 - Abril de 2023</p>
+                        <p class="data">Março de 2023 - Abril de 2023</p>
+                        <div class="texto">
                         <p><strong>Cargo:</strong> Estagiária em Manutenção e Suporte de Computadores</p>
                         <p><strong>Empresa:</strong> Neres Informática</p>
                         <p><strong>Descrição:</strong> Manutenção de hardware e software de computadores e notebooks.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="secao">
                 <div class="grid">
                     <div>
-                        <p>Janeiro de 2019 - Janeiro de 2020</p>
+                        <p class="data">Janeiro de 2019 - Janeiro de 2020</p>
+                        <div class="texto">
                         <p><strong>Cargo:</strong> Estagiária em Design Gráfico</p>
                         <p><strong>Empresa:</strong> CONAB - Companhia Nacional do Abastecimento</p>
                         <p><strong>Descrição:</strong> Criação e atualização de designs para divulgação em sites e redes sociais.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="escolaridade" class="secao">
-            <h2>Escolaridade</h2>
+            <h2>Formação</h2>
             <div class="grid">
                 <div>
+                    <p class="data">Julho de 2023 - O momento atual</p>
+                    <div class="texto">
                     <p><strong>Graduação:</strong> Análise e Desenvolvimento de Sistemas</p>
                     <p><strong>Instituição:</strong> Unicesumar</p>
-                    <p><strong>Período:</strong> Julho de 2023 - O momento atual</p>
+                    </div>
                 </div>
                 <div>
+                    <p class="data">Outubro de 2021 - Novembro de 2023</p>
+                    <div class="texto">
                     <p><strong>Curso Técnico:</strong> Manutenção e Suporte em Informática</p>
                     <p><strong>Instituição:</strong> IFB - Instituto Federal de Brasília</p>
-                    <p><strong>Período:</strong> Outubro de 2021 - Novembro de 2023</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -92,23 +115,27 @@
             </ul>
         </section>
 
-        <section id="habilidades" class="secao">
-            <h2>Habilidades e Competências</h2>
-            <ul class="habilidades-lista">
-                <li>Habilidade 1</li>
-                <li>Habilidade 2</li>
-                <li>Habilidade 3</li>
-            </ul>
-        </section>
-
         <section id="projetos" class="secao">
             <h2>Projetos</h2>
-            <div id="carrossel">
-                <div class="projeto ativo"><img src="projeto1.jpg" alt="Projeto 1"></div>
-                <div class="projeto"><img src="projeto2.jpg" alt="Projeto 2"></div>
-                <div class="projeto"><img src="projeto3.jpg" alt="Projeto 3"></div>
-                <button id="anterior">Anterior</button>
-                <button id="proximo">Próximo</button>
+
+            <div class="projetos-container">
+                <h3>Projeto 1</h3>
+                <div class="carrossel" id="carrossel1">
+                    <div class="projeto ativo"><img src="../img/exemplo1.png" alt="Projeto 1 - Imagem 1"></div>
+                    <div class="projeto"><img src="../img/exemplo2.png" alt="Projeto 1 - Imagem 2"></div>
+                    <button class="anterior" data-carrossel="1">Anterior</button>
+                    <button class="proximo" data-carrossel="1">Próximo</button>
+                </div>
+            </div>
+
+            <div class="projetos-container">
+                <h3>Projeto 2</h3>
+                <div class="carrossel" id="carrossel2">
+                    <div class="projeto ativo"><img src="../img/exemplo2.png" alt="Projeto 2 - Imagem 1"></div>
+                    <div class="projeto"><img src="../img/exemplo1.png" alt="Projeto 2 - Imagem 2"></div>
+                    <button class="anterior" data-carrossel="2">Anterior</button>
+                    <button class="proximo" data-carrossel="2">Próximo</button>
+                </div>
             </div>
         </section>
     </main>

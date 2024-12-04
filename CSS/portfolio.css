@@ -19,27 +19,61 @@ body {
 /* Cabeçalho */
 .cabecalho {
     width: 100%;
-    background: linear-gradient(to bottom, #fcebf0, #ffe5ec);
-    color: #fb6f92;
     text-align: center;
     padding: 1.5rem 0;
 }
 
-/* .cabecalho h1 {
-    color: white;
-    text-shadow: 
-        0.5px 0.5px 0 #fc557f, 
-       -0.5px 0.5px 0 #fc557f, 
-        0.5px -0.5px 0 #fc557f, 
-       -0.5px -0.5px 0 #fc557f;
-} */
+.cabecalho h1 {
+    color: #fc6289;
+}
 
-/* Conteúdo */
+/* Informações Pessoais */
 .conteudo {
     width: 90%;
     max-width: 1200px;
     margin: 2rem 0;
 }
+
+.linha-pessoal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.informacoes, .resumo {
+    flex: 1;
+    text-align: center;
+}
+
+.foto-perfil {
+    flex: 0 0 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+    border: 3px solid #fb6f92;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.informacoes p, .resumo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #63192c;
+}
+
+.resumo h3 {
+    font-size: 1.5rem;
+    color: #63192c;
+    margin-bottom: 1rem;
+}
+
 
 /* Seções */
 .secao {
@@ -49,13 +83,21 @@ body {
 .secao h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #fb6f92;
+    color: #63192c;
     text-align: center;
     text-shadow: 
         0.5px 0.5px 0 white, 
        -0.5px 0.5px 0 white, 
         0.5px -0.5px 0 white, 
        -0.5px -0.5px 0 white;
+}
+
+.data {
+    color: white;
+}
+
+.texto {
+    color:#63192c;
 }
 
 /* Alinhamento */
@@ -74,7 +116,7 @@ body {
 }
 
 .grid > div {
-    background-color: #fff;
+    background-color: #ffb3c6;
     padding: 1rem;
     border: 1px solid #dee2e6;
     border-radius: 0.5rem;
@@ -82,46 +124,32 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Habilidades */
-.habilidades-lista {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.habilidades-lista li {
-    background-color: #fb6f92;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-}
 
 /* Carrossel */
-#carrossel {
+.carrossel {
     position: relative;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 1rem auto;
     overflow: hidden;
     border-radius: 0.5rem;
     background-color: #fff;
 }
 
-.projeto {
-    display: none;
-    text-align: center;
-}
-
-.projeto img {
+.carrossel img {
     width: 100%;
     height: auto;
+    display: block;
+}
+
+.projeto {
+    display: none;
 }
 
 .projeto.ativo {
     display: block;
 }
 
-#anterior, #proximo {
+.anterior, .proximo {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -133,12 +161,16 @@ body {
     border-radius: 50%;
 }
 
-#anterior {
+.anterior {
     left: 10px;
 }
 
-#proximo {
+.proximo {
     right: 10px;
+}
+
+.projetos-container {
+    margin-bottom: 2rem;
 }
 
 /* Rodapé */

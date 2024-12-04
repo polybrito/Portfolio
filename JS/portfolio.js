@@ -1,25 +1,29 @@
-// Script para o carrossel de projetos
+// Script para múltiplos carrosséis
 document.addEventListener("DOMContentLoaded", () => {
-    const projetos = document.querySelectorAll(".projeto");
-    const btnAnterior = document.getElementById("anterior");
-    const btnProximo = document.getElementById("proximo");
-    let projetoAtual = 0;
+    const carrosseis = document.querySelectorAll(".carrossel");
 
-    function atualizarCarrossel() {
-        projetos.forEach((projeto, index) => {
-            projeto.classList.toggle("ativo", index === projetoAtual);
+    carrosseis.forEach((carrossel, index) => {
+        const projetos = carrossel.querySelectorAll(".projeto");
+        const btnAnterior = carrossel.querySelector(".anterior");
+        const btnProximo = carrossel.querySelector(".proximo");
+        let projetoAtual = 0;
+
+        function atualizarCarrossel() {
+            projetos.forEach((projeto, i) => {
+                projeto.classList.toggle("ativo", i === projetoAtual);
+            });
+        }
+
+        btnAnterior.addEventListener("click", () => {
+            projetoAtual = (projetoAtual - 1 + projetos.length) % projetos.length;
+            atualizarCarrossel();
         });
-    }
 
-    btnAnterior.addEventListener("click", () => {
-        projetoAtual = (projetoAtual - 1 + projetos.length) % projetos.length;
+        btnProximo.addEventListener("click", () => {
+            projetoAtual = (projetoAtual + 1) % projetos.length;
+            atualizarCarrossel();
+        });
+
         atualizarCarrossel();
     });
-
-    btnProximo.addEventListener("click", () => {
-        projetoAtual = (projetoAtual + 1) % projetos.length;
-        atualizarCarrossel();
-    });
-
-    atualizarCarrossel();
 });
