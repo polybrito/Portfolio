@@ -1,29 +1,32 @@
-// Script para múltiplos carrosséis
-document.addEventListener("DOMContentLoaded", () => {
-    const carrosseis = document.querySelectorAll(".carrossel");
+document.querySelectorAll('.carrossel-container').forEach((container) => {
+    const carrossel = container.querySelector('.carrossel');
+    const imagens = carrossel.querySelectorAll('img');
+    const btnAnterior = container.querySelector('.anterior');
+    const btnProximo = container.querySelector('.proximo');
 
-    carrosseis.forEach((carrossel, index) => {
-        const projetos = carrossel.querySelectorAll(".projeto");
-        const btnAnterior = carrossel.querySelector(".anterior");
-        const btnProximo = carrossel.querySelector(".proximo");
-        let projetoAtual = 0;
+    let indiceAtual = 0;
 
-        function atualizarCarrossel() {
-            projetos.forEach((projeto, i) => {
-                projeto.classList.toggle("ativo", i === projetoAtual);
-            });
-        }
-
-        btnAnterior.addEventListener("click", () => {
-            projetoAtual = (projetoAtual - 1 + projetos.length) % projetos.length;
-            atualizarCarrossel();
+    // Função para mostrar a próxima imagem
+    const mostrarImagem = (indice) => {
+        imagens.forEach((img, i) => {
+            img.classList.toggle('ativo', i === indice);
         });
+    };
 
-        btnProximo.addEventListener("click", () => {
-            projetoAtual = (projetoAtual + 1) % projetos.length;
-            atualizarCarrossel();
-        });
-
-        atualizarCarrossel();
+    // Botões de navegação
+    btnAnterior.addEventListener('click', () => {
+        indiceAtual = (indiceAtual - 1 + imagens.length) % imagens.length;
+        mostrarImagem(indiceAtual);
     });
+
+    btnProximo.addEventListener('click', () => {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        mostrarImagem(indiceAtual);
+    });
+
+    // Navegação automática
+    // setInterval(() => {
+    //     indiceAtual = (indiceAtual + 1) % imagens.length;
+    //     mostrarImagem(indiceAtual);
+    // }, 3000); // Troca de imagem a cada 3 segundos
 });
