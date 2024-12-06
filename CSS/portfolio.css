@@ -16,15 +16,67 @@ body {
     background-attachment: fixed;
 }
 
-/* Cabeçalho */
+/* Header */
 .cabecalho {
     width: 100%;
-    text-align: center;
-    padding: 1.5rem 0;
+    background-color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 100;
 }
 
-.cabecalho h1 {
+/* Centraliza os itens no container */
+.container-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/* Logo */
+.logo {
+    justify-content: center;
+    display: flex;
+}
+
+.logo img {
+    width: 60px; 
+    height: auto;
+}
+
+/* Navegação */
+.navegacao ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacao a {
+    text-decoration: none;
     color: #fc6289;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #63192c;
+}
+
+
+/*titulo*/
+
+h1 {
+    color: #fc6289;
+    text-align: center;
 }
 
 /* Informações Pessoais */
@@ -73,6 +125,17 @@ body {
     font-size: 1.5rem;
     color: #63192c;
     margin-bottom: 1rem;
+}
+
+.contato-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px;
+}
+
+.contato-icons img {
+    width: 35px;
 }
 
 /* Experiência Profissional */
@@ -225,7 +288,7 @@ body {
 .descricao-projeto {
     width: 40%;
     padding: 1.5rem;
-    background-color: #ffb3c6;
+    background-color: white;
     border-radius: 10px;
     color: #63192c;
 }
@@ -238,8 +301,8 @@ body {
 
 /* Rodapé */
 .rodape {
-    background-color: #343a40;
-    color: white;
+    background: linear-gradient(to bottom, #fcebf0, white);
+    color: #fc6289;
     text-align: center;
     padding: 1rem;
     width: 100%;
